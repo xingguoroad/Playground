@@ -25,11 +25,10 @@ public class FindingPath {
 	public boolean hasPathTo(int v) {
 		return marked[v];
 	}
-	
+
 	public Iterable<Integer> pathTo(int v) {
 		if (marked[v]) {
 			Stack<Integer> path = new Stack<Integer>();
-			
 			for (int i = v; i != s; i = edgeTo[i]) {
 				path.push(i);
 			}
@@ -39,5 +38,5 @@ public class FindingPath {
 			return null;
 		}
 	}
-	
+
 }
